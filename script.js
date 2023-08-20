@@ -59,11 +59,12 @@ function playRound(user,Cpu){
 function game(userChoice){
 let CpuChoice = getComputerChoice();
 console.log("Computer chooses: " + CpuChoice);
-console.log(playRound(userChoice.toLowerCase(),CpuChoice));
-    if(playRound(userChoice.toLowerCase(),CpuChoice) == "Cpu Wins"){
+let roundResult = playRound(userChoice.toLowerCase(),CpuChoice);
+console.log(roundResult);
+    if(roundResult == "Cpu Wins"){
         ComputerWins++;
     }
-    else if(playRound(userChoice.toLowerCase(),CpuChoice) == "Player Wins"){
+    else if(roundResult == "Player Wins"){
         playerWins++;
     }
 }
